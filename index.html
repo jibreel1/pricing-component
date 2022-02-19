@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- displays site properly based on user's device -->
+
+      <link
+         rel="icon"
+         type="image/png"
+         sizes="32x32"
+         href="./images/favicon-32x32.png"
+      />
+
+      <link rel="stylesheet" href="dist/style.css" />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+         rel="stylesheet"
+      />
+
+      <title>Frontend Mentor | Interactive pricing component</title>
+
+      <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+      <style>
+         .attribution {
+            font-size: 11px;
+            text-align: center;
+         }
+         .attribution a {
+            color: hsl(228, 45%, 44%);
+         }
+      </style>
+   </head>
+   <body>
+      <section class="section">
+         <div class="heading">
+            <h1>Simple, traffic-based pricing</h1>
+            <p>Sign-up for our 30-day trial.</p>
+            <p>No credit card required.</p>
+         </div>
+
+         <main class="main">
+            <div class="slidermonthly hide-for-mobile">
+               <div class="viewmonth">
+                  <div class="view">
+                     <p>
+                        <span class="pageview"></span> Pageviews
+                     </p>
+                  </div>
+                  <div class="monthly">
+                     <p><span class="price"></span> /month</p>
+                  </div>
+               </div>
+
+               <div class="main_slidercontainer">
+                  <input
+                     type="range"
+                     min="1"
+                     max="5"
+                     class="slider"
+                     id="range"
+                  />
+               </div>
+            </div>
+
+            <div class="pricing hide-for-desktop">
+               <div class="view">
+                  <p class="views"><span class="pageview"></span> Pageviews</p>
+               </div>
+
+               <div class="main_slidercontainer">
+                  <input
+                     type="range"
+                     min="1"
+                     max="5"
+                     class="slider"
+                     id="range"
+                  />
+               </div>
+               <div class="monthly">
+                  <p><span class="price" id="month"></span> /month</p>
+               </div>
+            </div>
+
+            <div class="bills">
+               <span>Monthly Billing</span>
+               <label for="" class="main_switch">
+                  <input class="input" type="checkbox" id="" />
+                  <span class="toggle"></span>
+                  <!-- <span class="toggle_two"></span> -->
+               </label>
+               <span>Yearly Billing</span>
+               <span class="discount hide-for-mobile">25% discount</span>
+               <span class="discount1 hide-for-desktop">-25%</span>
+            </div>
+
+            <hr />
+
+            <div class="bonuscta">
+               <div class="bonus">
+                  <div>
+                     <img src="images/icon-check.svg" alt="" />
+                     <p>Unlimited websites</p>
+                  </div>
+                  <div>
+                     <img src="images/icon-check.svg" alt="" />
+                     <p>100% data ownership</p>
+                  </div>
+                  <div>
+                     <img src="images/icon-check.svg" alt="" />
+                     <p>Email reports</p>
+                  </div>
+               </div>
+
+               <a href="#" class="trial">Start my trial</a>
+            </div>
+         </main>
+
+         <div class="attribution">
+            Challenge by
+            <a
+               href="https://www.frontendmentor.io?ref=challenge"
+               target="_blank"
+               >Frontend Mentor</a
+            >. Coded by <a href="#">Your Name Here</a>.
+         </div>
+      </section>
+
+      <script src="/app/js/script.js"></script>
+   </body>
+</html>

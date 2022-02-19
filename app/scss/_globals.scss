@@ -1,0 +1,46 @@
+html {
+   font-size: 100%;
+   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+
+body {
+   margin: 0;
+   background-image: url("/images/bg-pattern.svg");
+   background-position: top left center;
+   background-size: auto;
+   background-repeat: no-repeat;
+   background-color: $mainBackground;
+   height: 100vh;
+   font-family: "Manrope", sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+   margin: 0;
+   padding: 0;
+   color: $Text;
+}
+
+a {
+   text-decoration: none;
+}
+
+.hide-for-mobile {
+   @include point-down(small) {
+      display: none !important;
+   }
+}
+
+.hide-for-desktop {
+    @include point-up(medium) {
+       display: none !important;
+    }
+}
