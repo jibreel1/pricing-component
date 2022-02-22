@@ -3,7 +3,6 @@
       width: 100%;
       outline: none;
 
-      
       @include point-down(small) {
          margin: 2.8125rem 0 3.75rem 0;
       }
@@ -34,55 +33,35 @@
    }
 
    &_switch {
-      position: relative;
-      display: inline-block;
-      width: 50px;
-      height: 25px;
+      width: 44px;
+      height: 22px;
+      background-color: $toggleBackground;
+      border-radius: 36px;
+      cursor: pointer;
+      transition: all 300ms ease-in-out;
+
+      &.active{
+         background-color: $discountText;
+      }
+
+      &:hover {
+         background-color: $fullSliderBar;
+      }
+
+      .inner-circle {
+         width: 16px;
+         height: 16px;
+         background-color: $white;
+         border-radius: 50%;
+         margin: 2.5px 4px;
+         transition: all 300ms ease-in-out;
+      }
+      &.active > .inner-circle {
+         margin-left: 24px;
+      }
 
       @include point-down(small) {
          margin: 0 10px;
       }
-
-      .input {
-         opacity: 0;
-         width: 0;
-         height: 0;
-      }
-
-      .toggle {
-         position: absolute;
-         top: 0;
-         right: 0;
-         bottom: 0;
-         left: 0;
-         cursor: pointer;
-         background-color: $toggleBackground;
-         //  transition: 0.4s;
-         border-radius: 30px;
-
-         &::before {
-            position: absolute;
-            content: "";
-            height: 18px;
-            width: 18px;
-            left: 4px;
-            bottom: 4px;
-            background-color: $white;
-            // transition: 0.4s;
-            border-radius: 50%;
-         }
-      }
-
-      input:checked + .toggle {
-         background-color: lawngreen;
-      }
-
-      .input:checked+.toggle::before {
-         transform: translateX(18px);
-      }
    }
 }
-
-// .input:checked + .toggle {
-//    background-color: $sliderBackround;
-// }

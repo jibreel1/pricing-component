@@ -47,11 +47,11 @@
                <div class="viewmonth">
                   <div class="view">
                      <p>
-                        <span class="pageview"></span> Pageviews
+                        <span class="pageview">100k</span> Pageviews
                      </p>
                   </div>
                   <div class="monthly">
-                     <p><span class="price"></span> /month</p>
+                     <p><span class="price">$16.00</span> /month</p>
                   </div>
                </div>
 
@@ -60,6 +60,7 @@
                      type="range"
                      min="1"
                      max="5"
+                     value="3"
                      class="slider"
                      id="range"
                   />
@@ -68,7 +69,7 @@
 
             <div class="pricing hide-for-desktop">
                <div class="view">
-                  <p class="views"><span class="pageview"></span> Pageviews</p>
+                  <p class="views"><span class="pageview">100k</span> Pageviews</p>
                </div>
 
                <div class="main_slidercontainer">
@@ -81,17 +82,15 @@
                   />
                </div>
                <div class="monthly">
-                  <p><span class="price" id="month"></span> /month</p>
+                  <p><span class="price" id="month">$16.00</span> /month</p>
                </div>
             </div>
 
             <div class="bills">
                <span>Monthly Billing</span>
-               <label for="" class="main_switch">
-                  <input class="input" type="checkbox" id="" />
-                  <span class="toggle"></span>
-                  <!-- <span class="toggle_two"></span> -->
-               </label>
+               <div class="main_switch" id="toggle">
+                  <div class="inner-circle"></div>
+               </div>
                <span>Yearly Billing</span>
                <span class="discount hide-for-mobile">25% discount</span>
                <span class="discount1 hide-for-desktop">-25%</span>

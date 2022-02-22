@@ -38,53 +38,41 @@
 }
 
 .main_switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 25px;
+  width: 44px;
+  height: 22px;
+  background-color: #cdd7ee;
+  border-radius: 36px;
+  cursor: pointer;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.main_switch.active {
+  background-color: #ff8c66;
+}
+
+.main_switch:hover {
+  background-color: #a5f3eb;
+}
+
+.main_switch .inner-circle {
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  margin: 2.5px 4px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.main_switch.active > .inner-circle {
+  margin-left: 24px;
 }
 
 @media (max-width: 39.9375em) {
   .main_switch {
     margin: 0 10px;
   }
-}
-
-.main_switch .input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.main_switch .toggle {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  cursor: pointer;
-  background-color: #cdd7ee;
-  border-radius: 30px;
-}
-
-.main_switch .toggle::before {
-  position: absolute;
-  content: "";
-  height: 18px;
-  width: 18px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  border-radius: 50%;
-}
-
-.main_switch input:checked + .toggle {
-  background-color: lawngreen;
-}
-
-.main_switch .input:checked + .toggle::before {
-  -webkit-transform: translateX(18px);
-          transform: translateX(18px);
 }
 
 html {
@@ -107,7 +95,6 @@ body {
   background-size: auto;
   background-repeat: no-repeat;
   background-color: #fafbff;
-  height: 100vh;
   font-family: "Manrope", sans-serif;
 }
 
@@ -147,14 +134,13 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
   position: relative;
   top: 50%;
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(11%);
+          transform: translateY(11%);
 }
 
 .section::before {
@@ -212,6 +198,7 @@ a {
 }
 
 .section .main {
+  width: 33.75em;
   background-color: white;
   padding: 2.8125em;
   border-radius: 10px;
@@ -219,6 +206,7 @@ a {
 
 @media (max-width: 39.9375em) {
   .section .main {
+    width: 20.4375em;
     padding: 2.375em 1.5625em;
     margin: 0 20px;
   }
@@ -242,12 +230,27 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.section .main .slidermonthly .view p {
+.section .main .slidermonthly .viewmonth .view p {
   font-size: 0.9375rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+}
+
+.section .main .slidermonthly .viewmonth .monthly {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section .main .slidermonthly .viewmonth .monthly .price {
+  font-size: 42px;
+  font-weight: 800;
+  color: #293356;
 }
 
 .section .main .pricing {
@@ -270,6 +273,12 @@ a {
           order: 3;
 }
 
+.section .main .pricing .monthly .price {
+  font-size: 42px;
+  font-weight: 800;
+  color: #293356;
+}
+
 .section .main .bills {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -280,7 +289,7 @@ a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  gap: 20px;
+  gap: 15px;
   margin: 50px 0 40px 0;
   font-size: 12px;
   color: #858fad;

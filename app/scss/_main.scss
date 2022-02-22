@@ -2,13 +2,12 @@
    display: flex;
    align-items: center;
    flex-direction: column;
-   width: 100%;
    position: relative;
    top: 50%;
    left: 0;
    right: 0;
    bottom: 0;
-   transform: translateY(-50%);
+   transform: translateY(11%);
 
    &::before {
       content: "";
@@ -59,12 +58,13 @@
    }
 
    .main {
-      //    width: 540px;
+      width: 33.75em;
       background-color: $white;
       padding: 2.8125em;
       border-radius: 10px;
 
       @include point-down(small) {
+         width: 20.4375em;
          padding: 2.375em 1.5625em;
          // padding: 2.8125em 0;
          margin: 0 20px;
@@ -78,12 +78,24 @@
             display: flex;
             justify-content: space-between;
             margin-bottom: 60px;
-         }
-         .view {
-            p {
-               font-size: 0.9375rem;
-               text-transform: uppercase;
-               letter-spacing: 1.5px;
+            align-items: center;
+
+            .view {
+               p {
+                  font-size: 0.9375rem;
+                  text-transform: uppercase;
+                  letter-spacing: 1.5px;
+               }
+            }
+
+            .monthly{
+               align-items: center;
+
+               .price{
+                  font-size: 42px;
+                  font-weight: 800;
+                  color: $CtaBackground;
+               }
             }
          }
       }
@@ -101,6 +113,12 @@
 
          .monthly{
             order: 3;
+
+            .price{
+               font-size: 42px;
+               font-weight: 800;
+               color: $CtaBackground;
+            }
          }
       }
 
@@ -109,7 +127,7 @@
          display: flex;
          align-items: center;
          justify-content: flex-end;
-         gap: 20px;
+         gap: 15px;
          margin: 50px 0 40px 0;
          font-size: 12px;
          color: $Text;
