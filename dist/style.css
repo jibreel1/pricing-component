@@ -202,6 +202,8 @@ a {
   background-color: white;
   padding: 2.8125em 0;
   border-radius: 10px;
+  -webkit-box-shadow: 0 15px 25px #eaeefb;
+          box-shadow: 0 15px 25px #eaeefb;
 }
 
 @media (max-width: 39.9375em) {
@@ -395,7 +397,7 @@ a {
 
 @media (max-width: 39.9375em) {
   .section .main .bonuscta .trial {
-    margin: 2.25rem 3.5rem 0 3.5rem;
+    margin: 2.25rem 3rem 0 3rem;
   }
 }
 
