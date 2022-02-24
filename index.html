@@ -43,56 +43,59 @@
          </div>
 
          <main class="main">
-            <div class="slidermonthly hide-for-mobile">
-               <div class="viewmonth">
+            <div class="mainHr">
+               <div class="slidermonthly hide-for-mobile">
+                  <div class="viewmonth">
+                     <div class="view">
+                        <p>
+                           <span class="pageview">100k</span> Pageviews
+                        </p>
+                     </div>
+                     <div class="monthly">
+                        <span class="price">$16.00</span><p>/ month</p>
+                     </div>
+                  </div>
+
+                  <div class="main_slidercontainer">
+                     <input
+                        type="range"
+                        min="1"
+                        max="5"
+                        value="3"
+                        class="slider"
+                     />
+                  </div>
+               </div>
+
+               <div class="pricing hide-for-desktop">
                   <div class="view">
-                     <p>
-                        <span class="pageview">100k</span> Pageviews
-                     </p>
+                     <p class="views"><span id="pageview">100k</span> Pageviews</p>
+                  </div>
+
+                  <div class="main_slidercontainer">
+                     <input
+                        type="range"
+                        min="1"
+                        max="5"
+                        value="3"
+                        class="slider"
+                        id="range"
+                     />
                   </div>
                   <div class="monthly">
-                     <p><span class="price">$16.00</span>/month</p>
+                     <span id="price">$16.00</span><p> / month</p>
                   </div>
                </div>
 
-               <div class="main_slidercontainer">
-                  <input
-                     type="range"
-                     min="1"
-                     max="5"
-                     value="3"
-                     class="slider"
-                  />
+               <div class="bills">
+                  <span>Monthly Billing</span>
+                  <div class="main_switch" id="toggle">
+                     <div class="inner-circle"></div>
+                  </div>
+                  <span>Yearly Billing</span>
+                  <span class="discount hide-for-mobile">25% discount</span>
+                  <span class="discount1 hide-for-desktop">-25%</span>
                </div>
-            </div>
-
-            <div class="pricing hide-for-desktop">
-               <div class="view">
-                  <p class="views"><span id="pageview">100k</span> Pageviews</p>
-               </div>
-
-               <div class="main_slidercontainer">
-                  <input
-                     type="range"
-                     min="1"
-                     max="5"
-                     class="slider"
-                     id="range"
-                  />
-               </div>
-               <div class="monthly">
-                  <p><span id="price">$16.00</span> /month</p>
-               </div>
-            </div>
-
-            <div class="bills">
-               <span>Monthly Billing</span>
-               <div class="main_switch" id="toggle">
-                  <div class="inner-circle"></div>
-               </div>
-               <span>Yearly Billing</span>
-               <span class="discount hide-for-mobile">25% discount</span>
-               <span class="discount1 hide-for-desktop">-25%</span>
             </div>
 
             <hr />
@@ -123,7 +126,7 @@
                href="https://www.frontendmentor.io?ref=challenge"
                target="_blank"
                >Frontend Mentor</a
-            >. Coded by <a href="#">Your Name Here</a>.
+            >. Coded by <a href="#">Jibreel</a>.
          </div>
       </section>
 

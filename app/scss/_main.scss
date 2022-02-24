@@ -60,14 +60,22 @@
    .main {
       width: 33.75em;
       background-color: $white;
-      padding: 2.8125em;
+      padding: 2.8125em 0;
       border-radius: 10px;
 
       @include point-down(small) {
          width: 20.4375em;
-         padding: 2.375em 1.5625em;
+         padding: 2.375em 0;
          // padding: 2.8125em 0;
          margin: 0 20px;
+      }
+
+      .mainHr{
+         padding: 0 2.8125em;
+
+         @include point-down(small) {
+            padding: 0 1.5625em;
+         }
       }
 
       .slidermonthly {
@@ -88,39 +96,45 @@
                }
             }
 
-            .monthly{
+            .monthly {
+               display: flex;
+               align-items: center;
 
-               .price{
+               .price {
                   font-size: 42px;
                   font-weight: 800;
                   color: $CtaBackground;
+                  margin-right: 6px;
                }
             }
          }
       }
 
-      .pricing{
+      .pricing {
          display: grid;
          grid-template-columns: 1fr;
          text-align: center;
 
-         .view{
+         .view {
             font-size: 0.9375rem;
             text-transform: uppercase;
             letter-spacing: 1.5px;
          }
 
-         .monthly{
+         .monthly {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             order: 3;
 
-            #price{
+            #price {
                font-size: 42px;
                font-weight: 800;
                color: $CtaBackground;
+               margin-right: 6px;
             }
          }
       }
-
 
       .bills {
          display: flex;
@@ -155,7 +169,7 @@
          display: grid;
          grid-template-columns: 1fr 1fr;
          gap: 5.25em;
-         margin-top: 2.375em;
+         margin: 2.375em 2.8125em 0 2.8125em;
          font-size: 12px;
 
          @include point-down(small) {
@@ -182,6 +196,11 @@
             height: 40px;
             text-align: center;
             transform: translateY(16px);
+            transition: color 150ms ease-in-out;
+
+            &:hover {
+               color: $white;
+            }
 
             @include point-down(small) {
                margin: 2.25rem 3.5rem 0 3.5rem;
@@ -193,9 +212,11 @@
          }
       }
       hr {
+         border: none;
+         height: 1px;
          margin: 0;
          padding: 0;
-         width: 100%;
+         background-color: $emptySliderBar
       }
    }
 }

@@ -11,6 +11,8 @@ const toggle = document.getElementById("toggle");
 //the toggle button
 const toggleClick = function () {
    toggle.classList.toggle("active");
+   rangeValue();
+   rangeValueMobile();
 };
 
 // the range slider for desktop
@@ -19,6 +21,7 @@ const rangeValue = function () {
 
    if (toggle.classList.contains("active")) {
       // console.log("discount");
+
       if (val == 1) {
          view.innerHTML = "10k";
          month.innerHTML = "$2.00";
@@ -63,6 +66,7 @@ const rangeValueMobile = function () {
 
    if (toggle.classList.contains("active")) {
       // console.log("discount");
+
       if (valM == 1) {
          viewMobile.innerHTML = "10k";
          monthMobile.innerHTML = "$2.00";
@@ -100,14 +104,6 @@ const rangeValueMobile = function () {
       }
    }
 };
-
-// ['click', 'input'].forEach(e => {
-//    range.addEventListener(e, rangeValue());
-// })
-
-// ['click', 'input'].forEach(e => {
-//    rangeMobile.addEventListener(e, rangeValueMobile);
-// })
 
 range.addEventListener("input", rangeValue);
 rangeMobile.addEventListener("input", rangeValueMobile);
