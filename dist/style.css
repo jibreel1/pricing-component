@@ -153,6 +153,7 @@ a {
   width: 146px;
   height: 145px;
   top: -47px;
+  z-index: -1;
 }
 
 .section .heading {
